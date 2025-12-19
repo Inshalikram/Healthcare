@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.healthcare">
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HealthCare">
+
+        <!-- LOGIN SCREEN -->
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- REGISTER SCREEN -->
+        <activity
+            android:name=".ui.auth.RegisterActivity"
+            android:exported="false" />
+
+        <!-- HOME ACTIVITY (DASHBOARD) -->
+        <activity
+            android:name=".ui.main.HomeActivity"
+            android:exported="false" />
+            
+        <!-- DOCTOR DASHBOARD ACTIVITY -->
+        <activity
+            android:name=".ui.doctor.DoctorDashboardActivity"
+            android:exported="false" />
+
+        <!-- MAIN ACTIVITY (Find Doctor Categories) -->
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="false" />
+            
+        <!-- DOCTOR LIST ACTIVITY -->
+        <activity
+            android:name=".ui.doctor.DoctorListActivity"
+            android:exported="false" />
+            
+        <!-- LAB TEST ACTIVITY -->
+        <activity
+            android:name=".ui.main.LabTestActivity"
+            android:exported="false" />
+
+        <!-- LAB TEST DETAILS ACTIVITY -->
+        <activity
+            android:name=".ui.main.LabTestDetailsActivity"
+            android:exported="false" />
+
+        <!-- BUY MEDICINE ACTIVITY -->
+        <activity
+            android:name=".ui.main.BuyMedicineActivity"
+            android:exported="false" />
+
+        <!-- BUY MEDICINE DETAILS ACTIVITY -->
+        <activity
+            android:name=".ui.main.BuyMedicineDetailsActivity"
+            android:exported="false" />
+
+        <!-- ORDER DETAILS ACTIVITY -->
+        <activity
+            android:name=".ui.main.OrderDetailsActivity"
+            android:exported="false" />
+            
+        <!-- DOCTOR DETAILS ACTIVITY -->
+        <activity
+            android:name=".ui.doctor.DoctorDetailsActivity"
+            android:exported="false" />
+            
+        <!-- BOOK APPOINTMENT ACTIVITY -->
+        <activity
+            android:name=".ui.doctor.BookAppointmentActivity"
+            android:exported="false" />
+            
+        <!-- APPOINTMENT HISTORY ACTIVITY -->
+        <activity
+            android:name=".ui.doctor.AppointmentHistoryActivity"
+            android:exported="false" />
+            
+        <!-- HEALTH ARTICLES ACTIVITY -->
+        <activity
+            android:name=".ui.main.HealthArticlesActivity"
+            android:exported="false" />
+            
+        <!-- HEALTH ARTICLES DETAILS ACTIVITY -->
+        <activity
+            android:name=".ui.main.HealthArticlesDetailsActivity"
+            android:exported="false" />
+            
+        <!-- Notification Service -->
+        <service
+            android:name=".util.NotificationService"
+            android:enabled="true"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
